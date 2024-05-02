@@ -45,5 +45,10 @@ namespace Travela.WebApi.Controllers
             _categoryService.TUpdate(category);
             return Ok("Kategori güncelleme işlemi başarıyla tamamlandı.");
         }
+        [HttpGet("CategoryCount")]
+        public IActionResult CategoryCount()
+        {
+            return Ok(_categoryService.TGetCategoryCount());
+        }
     }
 }

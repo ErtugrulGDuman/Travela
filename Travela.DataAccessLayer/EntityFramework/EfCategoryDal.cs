@@ -15,5 +15,12 @@ namespace Travela.DataAccessLayer.EntityFramework
         public EfCategoryDal(TravelaContext context) : base(context)
         {
         }
+
+        public int GetCategoryCount()
+        {
+            var contex = new TravelaContext();
+            var value = contex.Categories.Count();
+            return value;
+        }
     }
 }
